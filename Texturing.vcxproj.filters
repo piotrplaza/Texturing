@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="src\ogl">
+      <UniqueIdentifier>{c346bf8d-0677-4717-aea3-e1faa3702330}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\tools">
+      <UniqueIdentifier>{ecf093b6-bc04-46f7-b148-e8cd9d8e180d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ogl\shaders">
+      <UniqueIdentifier>{4cb865e6-e110-4fd1-9e5e-ff3ce4810821}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ogl\buffers">
+      <UniqueIdentifier>{a8b69f98-1e50-49ce-a43e-bd43121978ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\3rdParty">
+      <UniqueIdentifier>{e922c3f8-7ffb-48d4-8236-46e56f425243}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\3rdParty\stb_image">
+      <UniqueIdentifier>{855631ee-79e9-4a9a-be89-aee0d08e1b8b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="ogl\oglHelpers.cpp">
+      <Filter>src\ogl</Filter>
+    </ClCompile>
+    <ClCompile Include="ogl\shaders.cpp">
+      <Filter>src\ogl</Filter>
+    </ClCompile>
+    <ClCompile Include="ogl\uniformControllers.cpp">
+      <Filter>src\ogl</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\utility.cpp">
+      <Filter>src\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ogl\oglProxy.cpp">
+      <Filter>src\ogl</Filter>
+    </ClCompile>
+    <ClCompile Include="ogl\buffers\posTexCoordBuffers.cpp">
+      <Filter>src\ogl\buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdParty\stb_image\stb_image.cpp">
+      <Filter>src\3rdParty\stb_image</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ogl\oglHelpers.hpp">
+      <Filter>src\ogl</Filter>
+    </ClInclude>
+    <ClInclude Include="ogl\shaders.hpp">
+      <Filter>src\ogl</Filter>
+    </ClInclude>
+    <ClInclude Include="ogl\uniformControllers.hpp">
+      <Filter>src\ogl</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\glmHelpers.hpp">
+      <Filter>src\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\utility.hpp">
+      <Filter>src\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="ogl\oglProxy.hpp">
+      <Filter>src\ogl</Filter>
+    </ClInclude>
+    <ClInclude Include="ogl\shaders\programBase.hpp">
+      <Filter>src\ogl\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="ogl\shaders\texturing.hpp">
+      <Filter>src\ogl\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="ogl\buffers\posTexCoordBuffers.hpp">
+      <Filter>src\ogl\buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="3rdParty\stb_image\stb_image.h">
+      <Filter>src\3rdParty\stb_image</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ogl\shaders\texturing.fs">
+      <Filter>src\ogl\shaders</Filter>
+    </None>
+    <None Include="ogl\shaders\texturing.vs">
+      <Filter>src\ogl\shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>
