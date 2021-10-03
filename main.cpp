@@ -40,7 +40,7 @@ glm::ivec2 windowCenter{ 0 };
 glm::ivec2 windowSize{ 0 };
 
 std::unique_ptr<Shaders::Programs::Texturing> texturingShader;
-std::unique_ptr<Buffers::PosTexCoordBuffers> posColorBuffers;
+std::unique_ptr<Buffers::PosTexCoordBuffers> posTexCoordBuffers;
 
 int texture1 = -1;
 
@@ -79,7 +79,7 @@ void OGLInitialize()
 	glEnable(GL_DEPTH_TEST);
 
 	texturingShader = std::make_unique<Shaders::Programs::Texturing>();
-	posColorBuffers = std::make_unique<Buffers::PosTexCoordBuffers>();
+	posTexCoordBuffers = std::make_unique<Buffers::PosTexCoordBuffers>();
 }
 
 void PrepareGeometry()
@@ -107,8 +107,8 @@ void PrepareGeometry()
 		{1.0f, 1.0f}
 	};
 
-	posColorBuffers->setPositionBuffer(positions[0], positions.size(), GL_STATIC_DRAW);
-	posColorBuffers->setTexCoordBuffer(texCoords[0], texCoords.size(), GL_STATIC_DRAW);
+	posTexCoordBuffers->setPositionBuffer(positions[0], positions.size(), GL_STATIC_DRAW);
+	posTexCoordBuffers->setTexCoordBuffer(texCoords[0], texCoords.size(), GL_STATIC_DRAW);
 }
 
 void Initialize()
@@ -130,8 +130,8 @@ void RenderScene()
 
 	glUseProgram_proxy(texturingShader->getProgramId());
 
-	posColorBuffers->bindVertexArray();
-	glDrawArrays(GL_TRIANGLES, 0, posColorBuffers->getNumOfVertices());
+	posTexCoordBuffers->bindVertexArray();
+	glDrawArrays(GL_TRIANGLES, 0, posTexCoordBuffers->getNumOfVertices());
 }
 
 void PrepareFrame()
